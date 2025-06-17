@@ -177,7 +177,7 @@ func (r *fileSystemResource) Schema(_ context.Context, _ resource.SchemaRequest,
 	}
 }
 
-// --- mapFileSystemToModel ---
+// Map FB API filesystem to resource model
 func mapFileSystemToModel(fs *fb.FileSystem, model *fileSystemResourceModel) {
 	model.ID = types.StringPointerValue(fs.Id)
 	model.Name = types.StringPointerValue(fs.Name)
